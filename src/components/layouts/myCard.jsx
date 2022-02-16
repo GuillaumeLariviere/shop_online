@@ -17,7 +17,7 @@ const MyCard = (props)=>{
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     {catId} : {gendId}
                     <div className="text-center">
-                        <Link className="btn btn-outline-dark mt-auto" to={`productDetails/${id}`}>description</Link>
+                        <Link className="btn btn-outline-dark mt-auto" to={`productscreen/${id}`}>description</Link>
                     </div>
                 </div>
             </div>

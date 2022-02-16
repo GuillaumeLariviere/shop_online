@@ -1,26 +1,30 @@
-// import { useEffect, useState } from "react";
+import {useState } from "react";
+import  FilterMenu  from "../components/layouts/filter_menu";
+import  Products  from "../components/layouts/Products";
 // import {Gender}  from "../models/gender.model";
 
 const HomeScreen = () => {
 
-  // const [genders, setGenders] = useState([]);
+    const [gender_id,setGenderId] = useState(null)
+    const [category_id,setCategoryId] = useState(null)
+    
+    const genderOnClick = (e,id)=> {
+        e.preventDefault()
+        setGenderId(id)
+    }
+    const categoryOnClick = (e,id)=> {
+        e.preventDefault()
+        setCategoryId(id)
+    }
+    
+        return (
+          <>
 
-  // useEffect(()=>{
-  //   const fetchData = async () => {
-  //     const data = 
-  //       await (await fetch("http://localhost:5000/product")).text()
-  //     return data;
-      
-  //     //setGenders(genders);
-  //   };
-  //   fetchData().then(console.log).catch(console.error);
-  // },[])
+            <FilterMenu gender_id={gender_id} category_id={category_id} genderOnClick={genderOnClick} categoryOnClick={categoryOnClick}/>
+            <Products gender_id={gender_id} category_id={category_id}  />
 
-    return(
-        <>
-            <h1>HomeScreen</h1>
-        </>
-    );
+          </>
+        );
 };
 
 export default HomeScreen;
