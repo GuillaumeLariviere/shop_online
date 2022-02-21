@@ -13,6 +13,7 @@ const NavBar = () =>{
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/contactscreen">Contact</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/loginscreen">Log in</Link></li>
                     </ul>
                     <form className="d-flex">
                         <button className="btn btn-outline-dark" type="submit">

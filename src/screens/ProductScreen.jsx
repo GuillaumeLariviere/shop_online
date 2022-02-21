@@ -21,7 +21,7 @@ const ProductScreen = () => {
         
       };
       fetchData().catch(console.error);
-    },[])
+    },[id])
     console.log(products);
 
         return (

@@ -49,7 +49,7 @@ const {
            body
        }
        fetch(endpoint,init).then((response)=>{
-           return callback ? callback(response) : response;
+           return callback ? callback(evt,response) : {evt,response};
        }).catch(console.log);
     };
     return (
@@ -58,7 +58,7 @@ const {
         
          {props.children}
 
-        <button type="submit" className="btn btn-primary">{submitButtonText}</button>
+        <button type="submit" className="btn btn-outline-dark">{submitButtonText}</button>
     </form>
 </>
     );
